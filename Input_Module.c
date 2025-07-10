@@ -21,16 +21,21 @@ while(ch=='Y'|| ch=='y'){
   scanf("%s",&b.book_name);
   getchar();
   fputs(b.book_name,pf);
+
   printf("enter author name:");
   scanf("%s",b.author);
   getchar();
   fputs(b.author,pf);
+
   printf("enter price of book:");
   scanf("%d",&b.price);
   fprintf(pf,"%d",b.price);
+
   printf("enter genre of book:");
-  scanf("%d",&b.genre);
-  fprintf(pf,"%d",b.stock);
+  scanf("%s",&b.genre);
+  getchar();
+  fputs(b.genre,pf);
+
   printf("enter stock of book:");
   scanf("%d",&b.stock);
   fprintf(pf,"%d",b.stock);
