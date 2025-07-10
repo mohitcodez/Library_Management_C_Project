@@ -7,42 +7,43 @@ struct info{
   int price;
   char genre[10];
   int stock;
-}b;
+}b[100];
 void main(){
   char ch='y';
   FILE*pf;
   pf= fopen("io.txt","w");
-
+  int i=0;
   
   
 while(ch=='Y'|| ch=='y'){
   
   printf("enter book name:");
-  scanf("%s",&b.book_name);
+  scanf("%s",& b[i].book_name);
   getchar();
-  fputs(b.book_name,pf);
+  fputs(b[i].book_name,pf);
 
   printf("enter author name:");
-  scanf("%s",b.author);
+  scanf("%s",b[i].author);
   getchar();
-  fputs(b.author,pf);
+  fputs(b[i].author,pf);
 
   printf("enter price of book:");
-  scanf("%d",&b.price);
-  fprintf(pf,"%d",b.price);
+  scanf("%d",&b[i].price);
+  fprintf(pf,"%d",b[i].price);
 
   printf("enter genre of book:");
-  scanf("%s",&b.genre);
+  scanf("%s",&b[i].genre);
   getchar();
-  fputs(b.genre,pf);
+  fputs(b[i].genre,pf);
 
   printf("enter stock of book:");
-  scanf("%d",&b.stock);
-  fprintf(pf,"%d",b.stock);
+  scanf("%d",&b[i].stock);
+  fprintf(pf,"%d",b[i].stock);
 
  printf("do you want to input book Y/y:");
   scanf("%c",&ch);
   getchar();
+  i=i+1;
 }
   fclose(pf);
 
