@@ -17,6 +17,7 @@ p=fopen("input.txt","a");
 if(p == NULL){
     return ;
 }
+
 fputs("\n",p);
 fputs(b.book_name,p);
 fputs("  ",p);

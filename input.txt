@@ -1,9 +1,3 @@
-cs  
-albert  567  educational  67999  
-dfdf  dffvvv  45  fgfg  7688  
-fgg  fgfg  56  fgf  45  
-df  df  4  fg  4  
-dfdf  dfdf  34  dfdf  3  
-hekki  dfdg  342  fgf  34  
-cs  ghf  456  edu  78909  
-vs code  tyu  54  dontknow  787  
+
+ book name  author  price  stock
+cs guide  mohit  900  edu  7777778  
