@@ -17,8 +17,9 @@ p=fopen("input.txt","a");
 if(p == NULL){
     return ;
 }
+fputs("\n",p);
 fputs(b.book_name,p);
-fputs("  \n",p);
+fputs("  ",p);
 fputs(b.author,p);
 fprintf(p,"  %d  ",b.price);
 fputs(b.genre,p);
@@ -28,13 +29,15 @@ fclose(p);
 
 }
 void add_book(){
-char ch='y';
-    while(ch=='Y' || ch=='y'){
+char c='Y';
+
+    while (  c=='Y' || c =='y'){
     struct info b = book();
     writebook(b);
     printf("book entered \n");
-    printf("do you wanna add book");
-    scanf("%c",&ch);
+    printf("do you wanna add book:");
+    scanf(" %c", &c);
     getchar();
+
     }
 }
