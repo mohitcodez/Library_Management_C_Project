@@ -6,31 +6,35 @@ struct info{
   char book_name[20];
   char author[25];
   int price;
-  char genre[10];
+  char genre[15];
   int stock;
 }b;
 struct info book();
 void writebook( struct info b)  {
 FILE*p;
-p=fopen("input.txt","w");
+p=fopen("input.txt","a");
 
 if(p == NULL){
     return ;
 }
 fputs(b.book_name,p);
-fputs("  ",p);
+fputs("  \n",p);
 fputs(b.author,p);
 fprintf(p,"  %d  ",b.price);
 fputs(b.genre,p);
-fprintf(p,"  %d",b.stock);
+fprintf(p,"  %d  ",b.stock);
 
 fclose(p);
 
 }
 void add_book(){
-
-
+char ch='y';
+    while(ch=='Y' || ch=='y'){
     struct info b = book();
     writebook(b);
     printf("book entered \n");
+    printf("do you wanna add book");
+    scanf("%c",&ch);
+    getchar();
+    }
 }
