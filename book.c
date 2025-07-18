@@ -12,7 +12,7 @@ struct info{
 struct info book(){
     struct info b;
 
-
+getchar();
 printf("enter book name:");
  // scanf("%s",& b.book_name);
   gets(b.book_name);

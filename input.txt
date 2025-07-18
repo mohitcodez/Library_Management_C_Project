@@ -1,8 +1,3 @@
+  dfdf  4545  fggg  454  
 
- book name  author  price  stock
-cs guide  mohit  900  edu  7777778  
-dfd  fdf  55  fgfg  455  
-dfd  dfd  45  df  34  
-df  dfd  45  fg  34  
-dfdf  g  4  g  3  
-dfd  dffd  45  fdf  34  
+cs  csmaster  567  study  56778  

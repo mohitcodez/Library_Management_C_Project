@@ -18,14 +18,14 @@ if(p == NULL){
     return ;
 }
 
-fputs("\n",p);
+
 fputs(b.book_name,p);
 fputs("  ",p);
 fputs(b.author,p);
 fprintf(p,"  %d  ",b.price);
 fputs(b.genre,p);
 fprintf(p,"  %d  ",b.stock);
-
+fputs("\n",p);
 fclose(p);
 
 }
