@@ -40,5 +40,33 @@ char c='Y';
     scanf(" %c", &c);
     getchar();
 
+    }}
+
+
+void readbook( ) {
+FILE*p1;
+p1=fopen("input.txt","r+");
+
+if(p1 == NULL){
+    return ;
+}
+struct info b;
+    printf("\n--- Book Records ---\n");
+
+while (fscanf(p1, "%s", b.book_name) != EOF) {
+fscanf(p1, "%s", b.author);
+fscanf(p1, "%d", &b.price);
+fscanf(p1, "%s", b.genre);
+fscanf(p1, "%d", &b.stock);
+
+
+printf("\nBook Name: %s\n", b.book_name);
+        printf("Author: %s\n", b.author);
+        printf("Price: %d\n", b.price);
+        printf("Genre: %s\n", b.genre);
+        printf("Stock: %d\n", b.stock);
     }
+fclose(p1);
+
+
 }
