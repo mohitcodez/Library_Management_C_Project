@@ -14,6 +14,7 @@ struct info{
 void search(struct info b, char sn[20]){
 FILE*pp;
 int n=0;
+char o;
 pp=fopen("input.txt","r");
 if(pp == NULL){
     return ;
@@ -35,6 +36,8 @@ while (fscanf(pp, "%s", b.book_name) != EOF) {
         printf("Genre: %s\n", b.genre);
         printf("Stock: %d\n", b.stock);
         n=n+1;
+        
+
 break;
 
     }
