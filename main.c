@@ -3,8 +3,61 @@
 void add_book();
 void readbook( );
 void callsearch();
-void main(){
+int authenticateUser();
+int usernameExists();
+void registerUser();
+void getPassword();
+
+#define max_users 100
+#define max_len 30
+
+
+
+int main(){
     int m=0;
+
+
+    
+
+    char usernm[max_len], passwrd [max_len];
+    int attempts= 3, choice ;
+
+    printf("1. Register\n2. Login\nEnter choice: ");
+    scanf("%d", &choice);
+    if (choice == 1) {
+        registerUser();
+        int authenticateuser();
+
+    }
+    while(attempts>0){
+        printf("\nEnter Username");
+        scanf("%s",&usernm);
+
+        printf("\nEnter Password");
+        scanf("%s",&passwrd);
+
+        if(authenticateUser(usernm,passwrd)){
+            printf("\n Login Successful... welcome %s \n", usernm);
+            break;
+            
+        }
+        else {
+            attempts --;
+            printf("\n Invalid Username or Password..." );
+        }
+    }
+    if(attempts==0){
+    printf("\n Failed Attempts limit reached! Access denied \n");
+    
+        return 0;
+
+}
+
+
+
+
+
+
     while(m!=5){
     printf("----------------------\n");
     printf("1. Add Book\n");
@@ -30,5 +83,5 @@ void main(){
     }
     }
     
-     
+     return 0;
 }

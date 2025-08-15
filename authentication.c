@@ -4,6 +4,7 @@
 
 #define max_users 100
 #define max_len 30
+void getPassword(char *passwrd);
 
 int authenticateUser(const char *usernm, const char *passwrd){
 FILE *f = fopen("user.txt","r");
@@ -43,7 +44,8 @@ void registerUser() {
     char usernm[max_len], passwrd[max_len];
 
     printf(" Enter new username: ");
-    scanf("%s", &usernm);
+    scanf("%15s", &usernm);
+    
 
     if (usernameExists(usernm)) {
         printf("Username already exists. Try a different one.\n");
@@ -65,35 +67,5 @@ void registerUser() {
     printf(" Registration successful!\n");
 }
 void getPassword(char *passwrd) {
-    scanf("%s", &passwrd); 
-}
-int main () {
-    char usernm[max_len], passwrd [max_len];
-    int attempts= 3, choice ;
-     printf("1. Register\n2. Login\nEnter choice: ");
-    scanf("%d", &choice);
-
-    if (choice == 1) {
-        registerUser();
-        return 0;
-    }
-
-    while(attempts>0){
-        printf("\nEnter Username");
-        scanf("%s",&usernm);
-
-        printf("\nEnter Password");
-        scanf("%s",&passwrd);
-
-        if(authenticateUser(usernm,passwrd)){
-            printf("\n Login Successful... welcome %s \n", usernm);
-            return 0;
-        }
-        else {
-            attempts --;
-            printf("\n Invalid Username or Password...\n Attempts left %d \n", attempts );
-        }
-    }
-    printf("\n Failed Attempts limit reached! Access denied \n");
-    return 1;
+    scanf("%29s", passwrd); 
 }
