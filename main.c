@@ -30,10 +30,10 @@ int main(){
 
     }
     while(attempts>0){
-        printf("\nEnter Username");
+        printf("\nEnter Username:");
         scanf("%s",&usernm);
 
-        printf("\nEnter Password");
+        printf("\nEnter Password:");
         scanf("%s",&passwrd);
 
         if(authenticateUser(usernm,passwrd)){
