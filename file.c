@@ -18,10 +18,13 @@ if(p == NULL){
     return ;
 }
 
-
+fputs("\"",p);
 fputs(b.book_name,p);
+fputs("\"",p);
 fputs("  ",p);
+fputs("\"",p);
 fputs(b.author,p);
+fputs("\"",p);
 fprintf(p,"  %d  ",b.price);
 fputs(b.genre,p);
 fprintf(p,"  %d  ",b.stock);
@@ -54,6 +57,8 @@ struct info b;
     printf("\n--- Book Records ---\n");
 
 while (fscanf(p1, "%s", b.book_name) != EOF) {
+  
+
 fscanf(p1, "%s", b.author);
 fscanf(p1, "%d", &b.price);
 fscanf(p1, "%s", b.genre);
