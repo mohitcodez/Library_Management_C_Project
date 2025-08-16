@@ -7,7 +7,7 @@ int authenticateUser();
 int usernameExists();
 void registerUser();
 void getPassword();
-
+void isse();
 #define max_users 100
 #define max_len 30
 
@@ -64,6 +64,7 @@ int main(){
     printf("2. Veiw Book\n");
     printf("3. Delete Book\n");
     printf("4. Search Book\n");
+ 
     printf("5. exit\n");
     scanf("%d",&m);
     switch(m){
@@ -73,6 +74,7 @@ int main(){
         break;
         case 4: callsearch();
         break;
+        
         case 5:printf("program exited");
 
         break;

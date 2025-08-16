@@ -48,7 +48,7 @@ char c='Y';
 
 void readbook( ) {
 FILE*p1;
-p1=fopen("input.txt","r+");
+p1=fopen("temp.txt","r+");
 
 if(p1 == NULL){
     return ;

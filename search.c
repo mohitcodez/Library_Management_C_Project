@@ -10,7 +10,7 @@ struct info{
   int stock;
 }b;
 void issue();
-
+void callissue();
 
 void search(struct info b, char sn[20]){
 FILE*pp;
@@ -41,7 +41,7 @@ while (fscanf(pp, "%s", b.book_name) != EOF) {
         printf("do you want to issue this book y/Y:");
         scanf("%1c",&iss);
         if(iss=='y'||iss=='Y'){
-            issue(b);
+             callissue( b);
             
         }
 
