@@ -9,11 +9,13 @@ struct info{
   char genre[15];
   int stock;
 }b;
+void issue();
 
 
 void search(struct info b, char sn[20]){
 FILE*pp;
 int n=0;
+char iss;
 char o;
 pp=fopen("input.txt","r");
 if(pp == NULL){
@@ -36,7 +38,12 @@ while (fscanf(pp, "%s", b.book_name) != EOF) {
         printf("Genre: %s\n", b.genre);
         printf("Stock: %d\n", b.stock);
         n=n+1;
-        
+        printf("do you want to issue this book y/Y:");
+        scanf("%1c",&iss);
+        if(iss=='y'||iss=='Y'){
+            issue(b);
+            
+        }
 
 break;
 

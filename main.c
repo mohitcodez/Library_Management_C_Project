@@ -46,7 +46,7 @@ int main(){
             printf("\n Invalid Username or Password..." );
         }
     }
-    if(attempts==0){
+    if(attempts==0){    
     printf("\n Failed Attempts limit reached! Access denied \n");
     
         return 0;
