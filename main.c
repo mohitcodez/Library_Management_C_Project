@@ -8,6 +8,7 @@ int usernameExists();
 void registerUser();
 void getPassword();
 void isse();
+void callissue();
 #define max_users 100
 #define max_len 30
 
@@ -58,14 +59,14 @@ int main(){
 
 
 
-    while(m!=5){
+    while(m!=6){
     printf("----------------------\n");
     printf("1. Add Book\n");
     printf("2. Veiw Book\n");
     printf("3. Delete Book\n");
     printf("4. Search Book\n");
- 
-    printf("5. exit\n");
+        printf("5. issue\n");
+    printf("6. exit\n");
     scanf("%d",&m);
     switch(m){
         case 1:add_book();
@@ -74,8 +75,10 @@ int main(){
         break;
         case 4: callsearch();
         break;
+        case 5: callissue( );
+        break;
         
-        case 5:printf("program exited");
+        case 6:printf("program exited");
 
         break;
         

@@ -40,10 +40,10 @@ while (fscanf(pp, "%s", b.book_name) != EOF) {
         n=n+1;
         printf("do you want to issue this book y/Y:");
         scanf("%1c",&iss);
-        if(iss=='y'||iss=='Y'){
+        /*if(iss=='y'||iss=='Y'){
              callissue( b);
             
-        }
+        }*/
 
 break;
 
