@@ -1,9 +1,22 @@
-# Library_Management_C_Project
-A simple CLI program that replicates a library management
-features like 
-Add book
-search book
-issure book
-delete book
-so its a simple program that create a text file save all the data of book i.e its author , name , book id , quantitiy and modify and search in this file
-and issue features simply decrease the quantity every time you issue book
+# 📚 Library Management System (C)
+
+A simple command-line **Library Management System** written in C using file handling.  
+It allows you to manage books, search, issue, and delete records — all stored locally in text files.
+
+---
+
+## 🧩 Features
+- Add new books  
+- Search books by name, author, or code  
+- Modify or delete existing books  
+- Issue and return books  
+- User login and authentication  
+- Stores data in text files (no database)
+
+---
+
+## ⚙️ How to Run
+
+### Compile:
+```bash
+gcc main.c authentication.c book.c search.c uniquecodegen.c -o library
